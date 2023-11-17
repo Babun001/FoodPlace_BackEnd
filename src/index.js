@@ -11,7 +11,7 @@ const mongodata = process.env.MONGODB_URI;
 console.log(mongodata);
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: "foodplaceindia.netlify.app",
     })
 );
 
@@ -43,7 +43,7 @@ app.use('/api', require("./Routes/DisplayData"));
 
 
 
-app.listen(3001, () => {
-    console.log("Server is running on port : 3001");
+app.listen(5000, () => {
+    console.log("Server is running on port : 5000");
 });
 
