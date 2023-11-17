@@ -11,7 +11,8 @@ const mongodata = process.env.MONGODB_URI;
 console.log(mongodata);
 app.use(
     cors({
-        origin: "https://foodplaceindia.netlify.app/"
+        // origin: "https://foodplaceindia.netlify.app/"
+        origin: "*"
     })
 );
 
