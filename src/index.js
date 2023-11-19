@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const mongodata = process.env.MONGODB_URI;
-console.log(mongodata);
+// console.log(mongodata);
 app.use(
     cors({
         // origin: "https://foodplaceindia.netlify.app/"
@@ -29,7 +29,7 @@ mongoose.connect(mongodata)
                         global.foodCategory = catData;
                     })
             })
-            .catch((err) => {
+            .catch(() => {
                 console.log("Server Error!");
             })
     })
