@@ -8,7 +8,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const mongodata = process.env.MONGODB_URI;
-// const mongodata = "mongodb+srv://babunroy987:Gpn743262@cluster0.bdzq8wo.mongodb.net/FoodPlace?authMechanism=DEFAULT"
 // console.log(mongodata);
 app.use(
     cors({
