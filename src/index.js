@@ -8,11 +8,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const mongodata = process.env.MONGODB_URI;
-<<<<<<< HEAD
-=======
-// const mongodata = "mongodb+srv://babunroy987:Gpn262347@cluster0.bdzq8wo.mongodb.net/FoodPlace?authMechanism=DEFAULT"
->>>>>>> dab94059068b096ae638f45f7e3d99d9dc2ef927
-// console.log(mongodata);
+console.log(mongodata);
 app.use(
     cors({
         // origin: "https://foodplaceindia.netlify.app/"
