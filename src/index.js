@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const mongodata = process.env.MONGODB_URI;
+// const mongodata = process.env.MONGODB_URI;
+const mongodata = 'mongodb+srv://babunroy987:Gpn743262@cluster0.bdzq8wo.mongodb.net/FoodPlace?authMechanism=DEFAULT';
 console.log(mongodata);
 app.use(
     cors({
@@ -15,6 +16,7 @@ app.use(
         origin: "*"
     })
 );
+app.use(express.json());
 
 mongoose.connect(mongodata)
     .then(() => {
@@ -27,14 +29,17 @@ mongoose.connect(mongodata)
                     .then((catData) => {
                         global.food_items = data;
                         global.foodCategory = catData;
+                        // console.log(global.food_items[0].description);                       
+                        
                     })
+                
             })
             .catch(() => {
                 console.log("Server Error!");
             })
     })
     .catch((err) => {
-        console.log(`Connection Failed!${err}`);
+        console.log(`Connection Failed! ${err}`);
     });
 
 
