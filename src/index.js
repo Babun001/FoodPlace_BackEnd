@@ -7,8 +7,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-// const mongodata = process.env.MONGODB_URI;
-const mongodata = 'mongodb+srv://babunroy987:Gpn743262@cluster0.bdzq8wo.mongodb.net/FoodPlace?authMechanism=DEFAULT';
+const mongodata = process.env.MONGODB_URI;
 console.log(mongodata);
 app.use(
     cors({
@@ -28,8 +27,7 @@ mongoose.connect(mongodata)
                 foodCategory.find({}).toArray()
                     .then((catData) => {
                         global.food_items = data;
-                        global.foodCategory = catData;
-                        // console.log(global.food_items[0].description);                       
+                        global.foodCategory = catData;                      
                         
                     })
                 
